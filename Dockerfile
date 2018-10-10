@@ -2,7 +2,9 @@ FROM linuxserver/sonarr
 MAINTAINER mdhiggins <mdhiggins23@gmail.com>
 
 # get python3 and git, and install python libraries
-apt-get install -y \
+RUN \
+  apt-get update && \
+  apt-get install -y \
     git \
     wget \
     libgl1-mesa-glx \
