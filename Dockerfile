@@ -2,13 +2,14 @@ FROM linuxserver/sonarr
 MAINTAINER mdhiggins <mdhiggins23@gmail.com>
 
 # get python3 and git, and install python libraries
-RUN \
-  apt-get update && \
-  apt-get install -y \
+apt-get install -y \
     git \
     wget \
+    libgl1-mesa-glx \
+    libgl1-mesa-dri \
     python3 \
     python3-pip && \
+    rm -rf /var/lib/apt/lists/*
 
 # install pip, venv, and set up a virtual self contained python environment
   python3 -m pip install --user --upgrade pip && \
