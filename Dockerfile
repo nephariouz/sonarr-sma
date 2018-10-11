@@ -9,6 +9,7 @@ RUN \
     wget \
     libgl1-mesa-glx \
     libgl1-mesa-dri \
+    i965-va-driver \
     python3 \
     python3-pip && \
 
